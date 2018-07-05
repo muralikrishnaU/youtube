@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
 import '../styles.css'
 
-const VideoListItem=(props) => {
-	const video=props.video;
+const VideoListItem=({video}) => {
+
 	const imageURL= video.snippet.thumbnails.default.url;
 	return (
 		<li className="list-group-item">

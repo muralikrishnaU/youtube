@@ -12,7 +12,8 @@ ul {
     padding: 5px;
     width: 100px;
     height: 50px;
-}
+    font-size: small;}
+
 .user-input{
 	width: 60%;
     padding: 12px 20px;
