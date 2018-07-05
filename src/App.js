@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import SearchBar from './components/search_bar';
 import VideoList from './components/video_list';
+import VideoDetail from './components/video_detail';
 import YTSearch from 'youtube-api-search';
-
+import './styles.css'
 
 
 const API_KEY="AIzaSyBjccnAs9nRSXELICCW4MogIV9LPhHiiIQ";
  
 class App extends Component {
-	constructor(){
-		super();
+	constructor(props){
+		super(props);
 		this.state={
 			videos:[]
 		}
@@ -21,9 +22,10 @@ class App extends Component {
 	render() {
 	    return (
 	    	<div>
-		      <SearchBar/>
-		      <VideoList videos={this.state.videos}/>
-	    	</div>
+		      <SearchBar />
+		      <VideoDetail video={this.state.videos[0]} />
+		      <VideoList videos={this.state.videos} />
+		    </div>
 	    );
 	  }
 }
